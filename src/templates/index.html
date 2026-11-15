@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Database CRUD</title>
+</head>
+<body>
+    <h1>Students Database Management</h1>
+
+    <!-- Status message area for operation feedback and errors -->
+    <p id="status-message"></p>
+
+    <hr>
+
+    <!-- 1. Retrieve All Students -->
+    <h2>1. All Students (getAllStudents)</h2>
+    <button type="button" onclick="loadStudents()">Refresh Students List</button>
+    <br><br>
+    <table border="1" cellpadding="6" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Enrollment Date</th>
+            </tr>
+        </thead>
+        <tbody id="students-table-body">
+            <!-- Rows populated dynamically by app.js -->
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- 2. Add a New Student -->
+    <h2>2. Add Student (addStudent)</h2>
+    <form id="add-student-form">
+        <label>First Name: <input type="text" id="first_name" required></label><br><br>
+        <label>Last Name: <input type="text" id="last_name" required></label><br><br>
+        <label>Email: <input type="email" id="email" required></label><br><br>
+        <label>Enrollment Date: <input type="date" id="enrollment_date"></label><br><br>
+        <button type="submit">Add Student</button>
+    </form>
+
+    <hr>
+
+    <!-- 3. Update Student Email -->
+    <h2>3. Update Student Email (updateStudentEmail)</h2>
+    <form id="update-email-form">
+        <label>Student ID: <input type="number" id="update_student_id" required></label><br><br>
+        <label>New Email: <input type="email" id="new_email" required></label><br><br>
+        <button type="submit">Update Email</button>
+    </form>
+
+    <hr>
+
+    <!-- 4. Delete Student -->
+    <h2>4. Delete Student (deleteStudent)</h2>
+    <form id="delete-student-form">
+        <label>Student ID: <input type="number" id="delete_student_id" required></label><br><br>
+        <button type="submit">Delete Student</button>
+    </form>
+
+    <!-- Load Vanilla JavaScript file -->
+    <script src="/static/app.js"></script>
+</body>
+</html>
